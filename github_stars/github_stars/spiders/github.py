@@ -8,7 +8,7 @@ class githubSpider(CrawlSpider):
 
 	start_urls = ['https://github.com/raokartikkumar24?tab=stars']
 
-	rule = (Rule(LinkExtractor(allow='/raokartikkumar24'),),callback='parse_page',),)
+	rules = (Rule(LinkExtractor(allow=('/raokartikkumar24'),),callback='parse_page',follow=False),)
 
 	def parse_page(self, response):
 		print("parsing URL")
