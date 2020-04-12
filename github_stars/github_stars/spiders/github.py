@@ -14,6 +14,6 @@ class githubSpider(CrawlSpider):
 		print("parsing URL")
 		print(response.url)
 
-		list_github_starts = response.css('div.d-inline-block > h3 > a::text()').extract()
+		list_github_starts = response.css('div.d-inline-block > h3 > a::text').extract()
 		if(len(list_github_starts) < 0):
 			print(list_github_starts)
