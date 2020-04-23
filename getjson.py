@@ -8,7 +8,7 @@ r = requests.get('https://www.ndtv.com', headers=headers)
 
 returnedJson = r.json()
 
-allStocks = returnedJson['data']
+article = returnedJson['data']
 
-for st in allStocks:
+for st in article:
 	print(st['name'])
